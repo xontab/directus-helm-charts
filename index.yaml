@@ -18,6 +18,6 @@ entries:
     name: directus
     type: application
     urls:
-    - https://xontab.github.io/helm-chart/directus-0.1.0.tgz
+    - https://xontab.github.io/directus-helm-charts/directus-0.1.0.tgz
     version: 0.1.0
 generated: "2022-01-05T16:14:50.947080567Z"

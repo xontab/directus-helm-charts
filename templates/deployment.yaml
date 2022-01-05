@@ -36,7 +36,9 @@ spec:
           env:
             - name: PUBLIC_URL
               value: http{{ if .Values.ingress.tls }}s{{ end }}://{{(index .Values.ingress.hosts 0).host }}
+            {{- if .Values.extraEnvVars }}
             {{- tpl (toYaml .Values.extraEnvVars) $ | nindent 12 }}
+            {{- end }}
           ports:
             - name: http
               containerPort: 8055
